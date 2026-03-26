@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Korea Market Entry Consulting | 한국 시장진출 컨설팅 | SISOCOSMETIC</title>
+<meta name="description" content="Enter the Korean beauty market the right way. Expert Korea market entry consulting for cosmetic brands.">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CE07YD84C6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CE07YD84C6');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Sans+KR:wght@300;400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream:#F9F5EF; --bone:#EDE8DF; --taupe:#C4B5A5;
+    --warm-brown:#8B7355; --deep-brown:#3D2B1F; --charcoal:#2A2420;
+    --gold:#C9A96E; --gold-light:#E8D5B0; --white:#FDFBF8; --text-muted:#7A6E65;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Montserrat','Noto Sans KR',sans-serif; background:var(--cream); color:var(--deep-brown); overflow-x:hidden; }
+
+  /* LANG */
+  .ko { display:none; } .en { display:inline; }
+  .ko-block { display:none; } .en-block { display:block; }
+  body.lang-ko .en { display:none; } body.lang-ko .ko { display:inline; }
+  body.lang-ko .en-block { display:none; } body.lang-ko .ko-block { display:block; }
+
+  /* NAV */
+  nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:20px 60px; background:rgba(249,245,239,0.94); backdrop-filter:blur(12px); border-bottom:1px solid rgba(196,181,165,0.25); }
+  .nav-logo img { height:44px; width:auto; display:block; }
+  .nav-links { display:flex; gap:36px; list-style:none; }
+  .nav-links a { font-size:11px; font-weight:500; letter-spacing:2px; text-transform:uppercase; color:var(--text-muted); text-decoration:none; }
+  .nav-links a.active { color:var(--deep-brown); font-weight:600; }
+  .lang-btn { background:none; border:1px solid var(--taupe); border-radius:20px; padding:6px 18px; cursor:pointer; font-size:11px; color:var(--warm-brown); }
+
+  /* HERO */
+  .hero { min-height:100vh; display:grid; grid-template-columns:1fr 1fr; padding-top:84px; }
+  .hero-left { padding:80px 60px; display:flex; flex-direction:column; justify-content:center; }
+  .hero-right { background:var(--deep-brown); padding:80px 60px; color:var(--cream); display:flex; align-items:center; }
+  .hero-title { font-family:'Cormorant Garamond',serif; font-size:clamp(38px,4.5vw,68px); font-weight:300; margin-bottom:24px; }
+  .hero-desc { font-size:13px; line-height:2.1; color:var(--text-muted); max-width:460px; margin-bottom:48px; }
+  .btn-primary { background:var(--deep-brown); color:var(--cream); padding:16px 32px; text-decoration:none; font-size:11px; letter-spacing:2px; text-transform:uppercase; display:inline-block; }
+
+  /* SECTIONS */
+  section { padding:100px 60px; }
+  .label { font-size:10px; letter-spacing:4px; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
+  .sec-title { font-family:'Cormorant Garamond',serif; font-size:clamp(34px,4vw,52px); font-weight:300; color:var(--deep-brown); margin-bottom:48px; }
+  .divider { width:60px; height:1px; background:var(--gold); margin-bottom:48px; }
+
+  /* PROBLEM Grid */
+  #problem { background:var(--charcoal); color:var(--cream); }
+  #problem .sec-title { color:var(--cream); }
+  .problem-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  .problem-card { background:rgba(255,255,255,0.05); padding:40px; }
+
+  /* WHAT WE DO */
+  .services-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; }
+  .svc { background:var(--white); padding:48px; border-bottom:2px solid transparent; transition: 0.3s; }
+  .svc:hover { border-bottom-color:var(--gold); }
+
+  footer { background:var(--charcoal); color:rgba(253,251,248,0.4); padding:40px 60px; display:flex; justify-content:space-between; }
+
+  @keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+  .reveal { opacity:0; transform:translateY(32px); transition: 0.7s ease; }
+  .reveal.visible { opacity:1; transform:translateY(0); }
+
+  @media (max-width:900px) {
+    .hero, .problem-grid, .services-grid { grid-template-columns:1fr; }
+    nav { padding:18px 24px; } .nav-links { display:none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="SISOCOSMETIC"></a>
+  <ul class="nav-links">
+    <li><a href="index.html" id="nav-home" onclick="passLang(event,this)">Home</a></li>
+    <li><a href="index.html#services" id="nav-services" onclick="passLang(event,this)">Services</a></li>
+    <li><a href="consulting.html" class="active" id="nav-consulting">Market Entry</a></li>
+    <li><a href="index.html#contact" id="nav-contact" onclick="passLang(event,this)">Contact</a></li>
+  </ul>
+  <button class="lang-btn" id="langBtn" onclick="toggleLang()">KR</button>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-tag"><span class="en">Korea Distribution Consulting</span><span class="ko">한국 시장진출 컨설팅</span></p>
+    <h1 class="hero-title"><span class="en-block">Enter the Korean<br><em>Beauty Market</em></span><span class="ko-block">한국 시장,<br><em>제대로 진출하세요</em></span></h1>
+    <p class="hero-desc en-block">Korea's beauty market is dynamic and competitive. We give you the structure, insight, and roadmap to launch with confidence.</p>
+    <p class="hero-desc ko-block">한국 화장품 시장은 경쟁이 매우 치열합니다. 시장 조사부터 유통 채널, 규정 로드맵까지 시소코스메틱이 함께합니다.</p>
+    <a href="mailto:sisocosmetic@naver.com" class="btn-primary"><span class="en">Request Proposal →</span><span class="ko">제안서 요청하기 →</span></a>
+  </div>
+  <div class="hero-right">
+    <div class="hero-stats">
+      <div class="stat-item" style="margin-bottom:30px">
+        <h3 style="color:var(--gold)">Global Trendsetter</h3>
+        <p style="font-size:12px; color:rgba(255,255,255,0.6)">K-beauty sets global trends — but local nuance is everything.</p>
+      </div>
+      <div class="stat-item">
+        <h3 style="color:var(--gold)">Proven Framework</h3>
+        <p style="font-size:12px; color:rgba(255,255,255,0.6)">Frameworks built from real on-the-ground Korea experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="problem">
+  <p class="label reveal"><span class="en">The Challenge</span><span class="ko">진출의 어려움</span></p>
+  <h2 class="sec-title reveal"><span class="en-block">Why Most Brands<br>Struggle in Korea</span><span class="ko-block">왜 많은 브랜드가<br>한국에서 어려움을 겪는가</span></h2>
+  <div class="problem-grid">
+    <div class="problem-card reveal"><h3>Competitive</h3><p>Korean consumers are highly informed and demanding.</p></div>
+    <div class="problem-card reveal"><h3>Regulatory</h3><p>Strict and frequently updated cosmetic regulations.</p></div>
+    <div class="problem-card reveal"><h3>Channels</h3><p>Finding the right channel is harder than making the product.</p></div>
+  </div>
+</section>
+
+<section id="whatwedo">
+  <p class="label reveal"><span class="en">What We Do</span><span class="ko">서비스 내용</span></p>
+  <h2 class="sec-title reveal"><span class="en-block">Four Pillars of<br>Entry Strategy</span><span class="ko-block">시장진출<br>4가지 핵심 서비스</span></h2>
+  <div class="services-grid">
+    <div class="svc reveal"><h4>01 Market Assessment</h4><p>Category sizing and competitor landscape analysis.</p></div>
+    <div class="svc reveal"><h4>02 Pricing Strategy</h4><p>Modeling the right price for competition and profit.</p></div>
+    <div class="svc reveal"><h4>03 Channel Strategy</h4><p>Olive Young, Department stores, or E-commerce?</p></div>
+    <div class="svc reveal"><h4>04 Launch Roadmap</h4><p>Timelines and key regulatory milestones.</p></div>
+  </div>
+</section>
+
+<footer>
+  <a href="index.html" class="footer-logo">SISOCOSMETIC</a>
+  <p>© 2025 SISOCOSMETIC.</p>
+</footer>
+
+<script>
+  const NAV_LABELS = {
+    'nav-home':      { en:'Home',         ko:'홈' },
+    'nav-services':  { en:'Services',     ko:'서비스' },
+    'nav-consulting':{ en:'Market Entry', ko:'한국 시장진출' },
+    'nav-contact':   { en:'Contact',      ko:'문의하기' }
+  };
+
+  function toggleLang() {
+    const isKo = document.body.classList.toggle('lang-ko');
+    document.getElementById('langBtn').textContent = isKo ? 'EN' : 'KR';
+    Object.entries(NAV_LABELS).forEach(([id, labels]) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = isKo ? labels.ko : labels.en;
+    });
+  }
+
+  // Animation Observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 60);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Corrected lang check from URL
+  if (new URLSearchParams(window.location.search).get('lang') === 'ko') {
+    toggleLang();
+  }
+
+  function passLang(e, el) {
+    const isKo = document.body.classList.contains('lang-ko');
+    if (isKo) {
+      e.preventDefault();
+      const base = el.getAttribute('href');
+      const target = base.split('#')[0];
+      const hash = base.split('#')[1] ? '#' + base.split('#')[1] : '';
+      window.location.href = target + '?lang=ko' + hash;
+    }
+  }
+</script>
+</body>
+</html>
